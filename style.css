@@ -1,0 +1,186 @@
+body{
+    background-color: rgb(5, 156, 194);
+}
+
+p {
+    font-family: Lato, 'Helvetica Neue', Helvetica, Arial, sans-serif;
+}
+
+.box-shadow{
+    box-shadow: inset 0 0 1em rgb(0, 0, 0), 0 0 1em rgb(0, 0, 0);
+    border-radius: 10%;
+}
+.sobreu{
+    text-transform: none;
+    color: white;
+}
+
+.card-img-top{
+    border-radius: 10%;
+    opacity: 75%;
+}
+
+.foto-perfil {
+    height: 100%;
+    max-width: auto;
+    border-radius: 50%;
+}
+
+.icones {
+    padding-left: 5px;
+}
+
+.titulosBrancos {
+    text-decoration: underline;
+    text-underline-position: under;
+    padding-bottom: 20px;
+    text-transform: uppercase;
+    font-weight: 700;
+    color: white;
+}
+
+.titulosPretos {
+    text-decoration: underline;
+    text-underline-position: under;
+    padding-bottom: 20px;
+    text-transform: uppercase;
+    font-weight: 700;
+    color: #0d0e0d
+}
+
+.paragrafoBrancos {
+    color: white !important;
+}
+
+
+.jumbotron {
+    margin-bottom: 0px;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+p {
+    color: black !important;
+}
+
+.corPrimaria {
+    background-color: #090c0b63;
+}
+
+.itemMenu {
+    color: white;
+}
+
+.fab, .fas{
+  color: black;
+}
+
+ /*FLIIP HABILIDADES*/
+
+ .container{
+    color: #555;
+    text-transform: uppercase;
+    font-size: 24px;
+    font-weight: bold;
+}
+
+.flip {
+    height: 50px;
+    overflow: hidden;
+}
+
+.flip >div >div{
+    color: #fff;
+    padding: 3px 10px;
+    height: 45px;
+    margin-bottom: 45px;
+    display: inline-block;
+}
+
+.flip div:first-child{
+    animation: show 6s linear infinite;
+}
+
+.flip div div{
+    background: #5cdafa;
+}
+
+.flip div:first-child div{
+    background: #e63946;
+}
+
+.flip div:last-child div{
+    background: #fca311;
+}
+
+@keyframes show {
+    0% { margin-top: -270px; }
+    5% { margin-top: -180px; }
+    33% { margin-top: -180px; }
+    38% { margin-top: -90px; }
+    66% { margin-top: -90px; }
+    71% { margin-top: 0px; }
+    99.99% { margin-top: 0px; }
+    100% { margin-top: -270px; }
+}
+
+/*CARTAO MAGICO*/
+
+@property --rotate {
+    syntax: "<angle>";
+    initial-value: 132deg;
+    inherits: false;
+}
+
+:root {
+    --cardi-height:90%;
+    --cardi-width: 90%;
+}
+
+@keyframes spin {
+    0% {
+        --rotate: 0deg;
+    }
+    100% {
+        --rotate: 360deg;
+    }
+}
+
+
+.cardi {
+    position: absolute;
+    width: 90%;
+    height: 90%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 90px;
+    border-radius: 10%;
+    font-size: 1.5em;
+    color: rgb(88, 199, 250, 0%);
+    position:absolute;
+	left:5%;
+	top:6%;
+}
+
+.cardi:hover{
+    color: rgb(255, 255, 255);
+    opacity: 75%;
+    background-image: linear-gradient(#5ddcff, #3c67e3, #4e00c2);
+}
+
+.cardi::before{
+    content: "";
+    width: 104%;
+    height: 102%;
+    border-radius: 8px;
+    background-image: linear-gradient(var(--rotate), #5ddcff, #3c67e3, #4e00c2);
+    position: absolute;
+    z-index: -2;
+    top: -1%;
+    left: -2%;
+    animation: spin 2.5s linear infinite;
+}
+
